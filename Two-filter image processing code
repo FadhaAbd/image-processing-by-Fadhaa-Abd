@@ -1,0 +1,15 @@
+
+clear all;
+close all;
+a=imread('barbara.tif');
+figure,imshow(a),title('a');
+a1=imnoise(a,'salt & pepper',0.02);
+figure,imshow(a1),title('a1');
+s=medfilt2(a1,[4,4]);
+figure,imshow(s),title('s');
+b=imread('einstein.tif');
+figure,imshow(b),title('b');
+b1=imnoise(b,'salt & pepper',0.02);
+figure,imshow(b1),title('b1');
+h=medfilt2(b1,[4,4]);
+figure,imshow(h),title('h');
